@@ -1,0 +1,25 @@
+{
+    "name": "Offline OpenGG Player",
+    "version": "0.1",
+    "manifest_version": 2,
+    "minimum_chrome_version": "20.0",
+    "description": "OpenGG.Clean.Player without Server Support",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": [
+            "redirect.js"
+        ]
+    },
+    "web_accessible_resources": [
+        "offline/crossdomain.xml",
+        "offline/loader.swf",
+        "offline/player.swf",
+        "offline/TudouYoukuPlayer_Homer_9.swf",
+        "offline/TudouVideoPlayer_Homer_238.swf",
+        "offline/nplayer.swf"
+    ]
+}
