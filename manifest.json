@@ -15,7 +15,7 @@
         ]
     },
     "web_accessible_resources": [
-        "offline/crossdomain.xml",
+        "crossdomain.xml",
         "offline/loader.swf",
         "offline/player.swf",
         "offline/TudouYoukuPlayer_Homer_9.swf",

@@ -42,9 +42,12 @@ chrome.webRequest.onBeforeRequest.addListener(
 );
 
 
+/*
+// don't know whether this works
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
-        return {redirectUrl: chrome.extension.getURL('offline/crossdomain.xml')};
+        console.log('redirect to local crossdomain.xml');
+        return {redirectUrl: chrome.extension.getURL('crossdomain.xml')};
     }, {
         urls: [
             'http://v.youku.com/crossdomain.xml'
@@ -52,3 +55,23 @@ chrome.webRequest.onBeforeRequest.addListener(
     },
     ['blocking']
 );
+*/
+
+
+/*
+chrome.webRequest.onBeforeRequest.addListener(
+    function(details) {
+        var original_url = details.url;
+        var redirect_url = original_url.replace(/^http:\/\/v\.opengg\.me/i, 'http://v.youku.com');
+
+        console.log('original url: ' + original_url);
+        console.log('redirect url: ' + redirect_url);
+        return {redirectUrl: redirect_url};
+    }, {
+        urls: [
+            'http://v.opengg.me/*'
+        ]
+    },
+    ['blocking']
+);
+*/
