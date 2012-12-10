@@ -2,15 +2,6 @@ var url_list = [
     {
         original: /^http:\/\/static\.youku\.com\/.*?q?(player|loader)(_[^.]+)?\.swf/i,
         redirect: 'offline/loader.swf'
-    }, {
-        original: /^http:\/\/js\.tudouui\.com\/.*?\/TudouYoukuPlayer_Homer[^.]*?\.swf/i,
-        redirect: 'offline/TudouYoukuPlayer_Homer_9.swf'
-    }, {
-        original: /^http:\/\/js\.tudouui\.com\/.*?\/TudouVideoPlayer_Homer_[^.]*?.swf/i,
-        redirect: 'offline/TudouVideoPlayer_Homer_238.swf'
-    }, {
-        original: /^http:\/\/dp\.tudou\.com\/nplayer[^.]*?\.swf|http:\/\/js\.tudouui\.com\/doupao\/nplayer[^.]*?\.swf/i,
-        redirect: 'offline/nplayer.swf'
     }
 ];
 
@@ -34,44 +25,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     }, {
         urls: [
             'http://static.youku.com/*',
-            'http://js.tudouui.com/*',
-            'http://dp.tudou.com/*'
         ]
     },
     ["blocking"]
 );
-
-
-/*
-// don't know whether this works
-chrome.webRequest.onBeforeRequest.addListener(
-    function(details) {
-        console.log('redirect to local crossdomain.xml');
-        return {redirectUrl: chrome.extension.getURL('crossdomain.xml')};
-    }, {
-        urls: [
-            'http://v.youku.com/crossdomain.xml'
-        ]
-    },
-    ['blocking']
-);
-*/
-
-
-/*
-chrome.webRequest.onBeforeRequest.addListener(
-    function(details) {
-        var original_url = details.url;
-        var redirect_url = original_url.replace(/^http:\/\/v\.opengg\.me/i, 'http://v.youku.com');
-
-        console.log('original url: ' + original_url);
-        console.log('redirect url: ' + redirect_url);
-        return {redirectUrl: redirect_url};
-    }, {
-        urls: [
-            'http://v.opengg.me/*'
-        ]
-    },
-    ['blocking']
-);
-*/

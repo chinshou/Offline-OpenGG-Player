@@ -15,11 +15,7 @@
         ]
     },
     "web_accessible_resources": [
-        "crossdomain.xml",
         "offline/loader.swf",
         "offline/player.swf",
-        "offline/TudouYoukuPlayer_Homer_9.swf",
-        "offline/TudouVideoPlayer_Homer_238.swf",
-        "offline/nplayer.swf"
     ]
 }
