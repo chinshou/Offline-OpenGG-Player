@@ -29,17 +29,3 @@ chrome.webRequest.onBeforeRequest.addListener(
     },
     ["blocking"]
 );
-
-
-chrome.webRequest.onBeforeRequest.addListener(
-    function(details) {
-        console.log('redirect to local crossdomain.xml');
-        //return {redirectUrl: chrome.extension.getURL('offline/crossdomain.xml')};
-		return {redirectUrl: 'http://v.opengg.me/crossdomain.xml'};
-    }, {
-        urls: [
-            'http://v.youku.com/crossdomain.xml'
-        ]
-    },
-    ['blocking']
-);
