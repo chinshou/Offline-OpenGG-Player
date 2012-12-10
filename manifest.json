@@ -16,6 +16,6 @@
     },
     "web_accessible_resources": [
         "offline/loader.swf",
-        "offline/player.swf",
+        "offline/player.swf"
     ]
 }

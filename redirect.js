@@ -1,6 +1,6 @@
 var url_list = [
     {
-        original: /^http:\/\/static\.youku\.com\/.*?q?(player|loader)(_[^.]+)?\.swf/i,
+        original: /^http:\/\/static\.youku\.com\/.*?q?loader(_[^.]+)?\.swf/i,
         redirect: 'offline/loader.swf'
     }
 ];
